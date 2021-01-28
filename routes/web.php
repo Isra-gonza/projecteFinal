@@ -1,7 +1,7 @@
 <?php
 
 //use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\ProductsController;
+//use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Providers\AppServiceProvider;
 
@@ -17,6 +17,9 @@ use App\Providers\AppServiceProvider;
 */
 
 
-Route::resource('Products', ProductsController::class);
+//Route::resource('Products', \ProductsController::class);
 
-Route::get('/', 'Products@index') ->name('inicio');
+//Route::get('/', 'App\Http\Controllers\ProductsController@index') ->name('inicio');
+Route::get('/', function () {
+    return view('welcome');
+});
